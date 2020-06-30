@@ -1,6 +1,8 @@
+// countを増やしたり減らしたりする機能
+
 import { INCREMENT, DECREMENT } from '../actions'
 
-const initalState = { value: 0 }
+const initalState = { value: 0 }  // 状態の初期値を設定
 
 export default (state = initalState, action) => {
   switch (action.type) {

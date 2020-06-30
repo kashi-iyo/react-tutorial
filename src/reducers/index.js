@@ -2,6 +2,6 @@
 // reducerは、アプリケーションの状態の変更を担う
 
 import { combineReducers } from 'redux' //reducerを結合させるための関数
-import count from './count'
+import events from './events'
 
-export default combineReducers({ count }) // 例：export default combineReducers({ foo, bar, baz })
+export default combineReducers({ events }) // 例：export default combineReducers({ foo, bar, baz })

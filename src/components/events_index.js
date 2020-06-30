@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
 // connect関数のインポート
 import { connect } from 'react-redux'
 import { readEvents } from '../actions' //readEvents関数のインポート
-
 import _ from 'lodash'
+import { Link } from 'react-router-dom'
 
 class EventsIndex extends Component {
 
@@ -24,19 +23,22 @@ class EventsIndex extends Component {
 
   render() {
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Body</th>
-          </tr>
-        </thead>
+      <div>
+       <table>
+         <thead>
+           <tr>
+             <th>ID</th>
+             <th>Title</th>
+             <th>Body</th>
+           </tr>
+         </thead>
 
-        <tbody>
-          {this.renderEvents()}
-        </tbody>
-      </table>
+         <tbody>
+           {this.renderEvents()}
+         </tbody>
+       </table>
+       <Link to="/events/new">New Event</Link>
+      </div>
     )
   }
 }
